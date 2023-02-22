@@ -1,0 +1,33 @@
+﻿@model MvcCv.Models.Entity.TblYeteneklerim
+@{
+    ViewData["Title"] = "YetenekDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Yetenek Düzenleme Sayfası</h4>
+<br />
+<form method="post">
+
+
+
+    <label>ID = @Model.ID</label>
+
+    <label>Başlık</label>
+
+    <input type="text" value="@Model.Yetenek" name="Yetenek" class="form-control" placeholder="Baslik Yazınız" />
+
+    <br />
+
+    <label>Alt Başlık</label>
+
+    <input type="text" value="@Model.Oran" name="Oran" class="form-control" placeholder="Alt Baslik Yazınız" />
+
+    <br />
+
+  
+    <button class="btn btn-info">Güncelle</button>
+
+
+
+</form>
