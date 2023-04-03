@@ -21,7 +21,6 @@ namespace MvcCv.Models.Entity
         public DbSet<TblSertifiklarim> TblSertifiklarim { get; set; }
         public DbSet<TblYeteneklerim> TblYeteneklerim { get; set; }
         public DbSet<Tblİletisim> Tblİletisim { get; set; }
-
-
+        public DbSet<TblSosyalMedya> TblSosyalMedya { get; set; }
     }
 }

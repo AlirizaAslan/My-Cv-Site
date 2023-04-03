@@ -1,0 +1,43 @@
+﻿@model MvcCv.Models.Entity.TblSosyalMedya
+@{
+    ViewData["Title"] = "SayfaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+<br />
+<h4>Sosyal medya Düzenleme Sayfası</h4>
+<br />
+<form method="post">
+
+
+
+    <label>ID = @Model.ID</label>
+
+    <label>Sosyal Medya Adı</label>
+
+    <input type="text" value="@Model.Ad" name="Ad" class="form-control" placeholder="Baslik Yazınız" />
+
+    <br />
+
+    <label>Link</label>
+
+    <input type="text" value="@Model.Link" name="Link" class="form-control" placeholder="Alt Baslik Yazınız" />
+
+    <br />
+    <label>İkon</label>
+
+    <input type="text" value="@Model.İkon" name="İkon" class="form-control" placeholder="Alt Baslik Yazınız" />
+
+    <br />
+
+
+    <button class="btn btn-info">Güncelle</button>
+
+
+
+</form>
+
+

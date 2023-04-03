@@ -1,0 +1,55 @@
+﻿@model MvcCv.Models.Entity.TblEgitimlerim
+@{
+    ViewData["Title"] = "EgitimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Egitim güncelleme Sayfası</h4>
+<br />
+<form method="post">
+
+
+
+    <label>ID = @Model.ID</label>
+
+    <label>Başlık</label>
+
+    <input type="text" value="@Model.Baslik" name="Baslik" class="form-control" placeholder="Baslik Yazınız" />
+
+    <br />
+
+    <label>Alt Başlık</label>
+
+    <input type="text" value="@Model.Altbaslik1" name="AltBaslik1" class="form-control" placeholder="Alt Baslik1 Yazınız" />
+
+    <br />
+
+
+    <label>Alt Başlık2</label>
+
+    <input type="text" value="@Model.Altbaslik2" name="AltBaslik2" class="form-control" placeholder="Alt Baslik2 Yazınız" />
+
+    <br />
+
+    <label>Tarih</label>
+
+    <input type="date" name="Tarih" value="@Model.Tarih" class="form-control" placeholder="egitim Tarihniz" />
+
+    <br />
+
+    <br />
+
+    <label>Gno</label>
+
+    <input type="text" value="@Model.GNG" name="GNG" class="form-control" placeholder="Gno Yazınız" />
+
+    <br />
+
+   
+
+    <button class="btn btn-info">Güncelle</button>
+
+
+
+</form>

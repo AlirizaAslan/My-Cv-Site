@@ -19,13 +19,14 @@ namespace MvcCv.Controllers
         private readonly TblHakkimda _hakkimda;
         private readonly TblDeneyimlerim _deneyimlerim;
         private readonly Tblİletisim _iletisim;
+        private readonly TblSosyalMedya _sosyalmedya;
         public DefaultController(UygulamaDbContext context)
         {
 
             _hakkimda=new TblHakkimda();
             _deneyimlerim=new TblDeneyimlerim();
             _iletisim=new Tblİletisim();
-
+            _sosyalmedya=new TblSosyalMedya();
 
             _context = context;
 
@@ -39,7 +40,11 @@ namespace MvcCv.Controllers
 
             return View(degerler);
         }
-
+        public PartialViewResult SosyalMedya()
+        {
+            var Sosyalmedya = _context.TblSosyalMedya.Where(x=>x.Durum==true).ToList();
+            return PartialView(Sosyalmedya);
+        }
 
         public PartialViewResult Deneyim()
         {

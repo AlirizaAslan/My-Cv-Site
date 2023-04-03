@@ -1,4 +1,4 @@
-﻿
+﻿@model MvcCv.Models.Entity.TblDeneyimlerim
 @{
     ViewData["Title"] = "DeneyimEkle";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -7,14 +7,19 @@
 <h4>Yeni deneyim Ekleme Sayfası</h4>
 <br />
 <form  method="post">
+   
     <label>Başlık</label>
     <input type="text" name="Baslik" class="form-control" placeholder="Başlığı yazınız"/>
+    @Html.ValidationMessageFor(x=>x.Baslik,"",new {@style="color:red"})
     <br />  
     <input type="text" name="AltBaslik" class="form-control" placeholder="Açıklama" />
+    @Html.ValidationMessageFor(x=>x.AltBaslik,"",new {@style="color:red"})
     <br />
     <input type="text" name="Tarih" class="form-control" placeholder="Çalışma Tarihi" />
+    @Html.ValidationMessageFor(x=>x.Tarih,"",new {@style="color:red"})
     <br />
     <textarea placeholder="Aciklamanızı giriniz" name="Açıklama" class="form-control" rows="5"></textarea>
+    @Html.ValidationMessageFor(x=>x.Aciklama,"",new {@style="color:red"})
    
     <br /> 
     <button class="btn btn-info">Kaydet</button>

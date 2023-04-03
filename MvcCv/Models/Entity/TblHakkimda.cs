@@ -11,6 +11,7 @@
         public string Mail { get; set; }
         public string Aciklama { get; set; }
         public string Resim { get; set; }
+
         
     }
 }

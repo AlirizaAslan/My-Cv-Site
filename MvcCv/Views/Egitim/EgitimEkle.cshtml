@@ -1,0 +1,37 @@
+﻿@model MvcCv.Models.Entity.TblEgitimlerim
+@{
+    ViewData["Title"] = "EgitimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h1>Egitim Lİstesi</h1>
+<form method="post"> 
+    <label >Baslık</label>
+    <br />
+    @Html.TextBoxFor(x=>x.Baslik, new { @class="form-control" })
+    @Html.ValidationMessageFor(x=>x.Baslik,"",new {@style="color:red"})
+    <br />
+    <label >AltBaslık1</label>
+    <br />
+    @Html.TextBoxFor(x=>x.Altbaslik1, new { @class="form-control" })
+    @Html.ValidationMessageFor(x=>x.Baslik,"",new {@style="color:red"})
+
+    <br />
+    <label >AltBaslık2</label>
+    <br />
+    @Html.TextAreaFor(x=>x.Altbaslik2, new { @class="form-control" })
+    @Html.ValidationMessageFor(x=>x.Altbaslik2,"",new {@style="color:red"})
+    <br />
+    <label>Tarih</label>
+    <br />
+    @Html.TextBoxFor(x=>x.Tarih, new { @class="form-control" })
+    @Html.ValidationMessageFor(x=>x.Tarih,"",new {@style="color:red"})
+    
+    <br />
+    <label>Gno</label>
+    <br />
+    @Html.TextBoxFor(x=>x.GNG, new { @class="form-control" })
+    @Html.ValidationMessageFor(x=>x.GNG,"",new {@style="color:blue"})
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>

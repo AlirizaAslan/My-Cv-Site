@@ -1,0 +1,33 @@
+﻿@model MvcCv.Models.Entity.TblSertifiklarim
+@{
+    ViewData["Title"] = "SertifikaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Sertifika Düzenleme Sayfası</h4>
+<br />
+<form method="post">
+
+
+
+    <label>ID = @Model.ID</label>
+
+    <label>sertifika Açıklaması</label>
+
+    <input type="text" value="@Model.Aciklama" name="Aciklama" class="form-control" placeholder="Baslik Yazınız" />
+
+    <br />
+
+    <label>Alt Başlık</label>
+
+    <input type="text" value="@Model.Tarih" name="Tarih" class="form-control" placeholder="Alt Baslik Yazınız" />
+
+    <br />
+
+
+    <button class="btn btn-info">Güncelle</button>
+
+
+
+</form>

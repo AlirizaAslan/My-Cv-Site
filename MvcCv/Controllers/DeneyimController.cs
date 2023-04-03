@@ -30,7 +30,10 @@ namespace MvcCv.Controllers
 
         [HttpPost]
         public IActionResult DeneyimEkle(TblDeneyimlerim p)
-        {
+        { if (!ModelState.IsValid)
+                {
+                    return View("DeneyimEkle");
+                }
             _repo.TAdd(p);
             return RedirectToAction("Index");   
         }
